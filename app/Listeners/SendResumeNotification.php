@@ -16,7 +16,7 @@ class SendResumeNotification implements ShouldQueue
     {
         $this->sendMessage(
             $event->userRequestHeader->user->phone_number,
-            $event->result
+            'Hasil kelulusan verifikasi: '.$event->result
         );
     }
 
