@@ -20,7 +20,7 @@ class InvalidResponseProcessRequest extends Exception
     public function report()
     {
         Log::error($this->message, [
-           'body' => $this->response->body(),
+            'result' => $this->response->json(),
             'status' => $this->response->status(),
             'headers' => $this->response->headers(),
         ]);
