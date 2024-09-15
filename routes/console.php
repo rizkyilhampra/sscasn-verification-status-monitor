@@ -2,4 +2,4 @@
 
 use Illuminate\Support\Facades\Schedule;
 
-Schedule::command('scrape:sscasn')->everyFiveMinutes();
+Schedule::command('scrape:sscasn')->everyTenMinutes();
