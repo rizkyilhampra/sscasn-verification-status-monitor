@@ -21,7 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'phone_number'
+        'phone_number',
     ];
 
     /**
@@ -47,8 +47,8 @@ class User extends Authenticatable
         ];
     }
 
-    public function requestHeaders(): HasOne
+    public function verificationStatus(): HasOne
     {
-        return $this->hasOne(UserRequestHeader::class);
+        return $this->hasOne(VerificationStatus::class);
     }
 }

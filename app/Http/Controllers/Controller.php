@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 abstract class Controller
 {
-    protected function parseCurlCommand(Request $request)
+    protected function parseCurlCommand($curlCommand)
     {
-        $curlCommand = $request->input('curl_command');
         $result = [
             'x_xsrf_token' => '',
             'cookies' => [],

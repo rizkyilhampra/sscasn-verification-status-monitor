@@ -2,4 +2,5 @@
 
 use Illuminate\Support\Facades\Schedule;
 
-Schedule::command('scrape:sscasn')->everyTenMinutes();
+Schedule::command('app:get-verification-status-command')
+    ->everyTenMinutes();
