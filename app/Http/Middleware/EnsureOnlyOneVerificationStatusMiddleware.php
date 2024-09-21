@@ -15,7 +15,7 @@ class EnsureOnlyOneVerificationStatusMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if ($request->user()->verifactionStatus()->exists()) {
+        if ($request->user()->verificationStatus()->exists()) {
             abort(403, 'You can only have one verifications status.');
         }
 
