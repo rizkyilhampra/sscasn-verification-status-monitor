@@ -40,4 +40,9 @@ class SendVerificationStatusResult implements ShouldQueue
             ]);
         }
     }
+
+    public function withDelay(): int
+    {
+        return now()->addMinutes(30)->timestamp;
+    }
 }
